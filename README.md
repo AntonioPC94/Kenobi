@@ -65,5 +65,5 @@ Aunque no podamos hacer nada ahora mismo con dicho servicio, tenemos un usuario 
 
 Ahora vamos a irnos al servicio RPCBind, el cual se encuentra en el puerto 111. Dicho servicio es interesante porque lo que hace es que cuando un programa cliente necesita comunicarse con un programa servidor a través de RPC, consulta a RPCBind para obtener el número de puerto asociado con el programa servidor en cuestión. De esta manera, RPCBind ayuda a los programas clientes a localizar los servicios RPC en el sistema.
 
-Entonces lo que vamos a hacer ahora, es lanzar una petición al servidor para obtener información sobre los servicios NFS que podrían estar disponibles en la máquina objetivo, como listar archivos (nfs-ls), estadísticas de espacio en disco (nfs-statfs) y exportaciones montadas (nfs-showmount).
+Bien, entonces ahora vamos a lanzar una petición al servidor para obtener información sobre los servicios NFS que podrían estar disponibles en la máquina objetivo, como listar archivos (nfs-ls), estadísticas de espacio en disco (nfs-statfs) y exportaciones montadas (nfs-showmount).
 
