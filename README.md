@@ -67,3 +67,5 @@ Ahora vamos a irnos al servicio RPCBind, el cual se encuentra en el puerto 111. 
 
 Bien, entonces ahora vamos a lanzar una petición al servidor para obtener información sobre los servicios NFS que podrían estar disponibles en la máquina objetivo, como listar archivos (nfs-ls), estadísticas de espacio en disco (nfs-statfs) y exportaciones montadas (nfs-showmount).
 
+
+
