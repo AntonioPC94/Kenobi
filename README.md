@@ -98,7 +98,47 @@ Revisando el "auth.log" nos encontraremos con que, tanto el usuario "kenobi", co
 
 Bien, ahora vamos a cambiar de servicio, concretamente al FTP. A ver qué conseguimos sacar de él.
 
-Lo primero que haremos, será verificar la versión de FTP instalada en la máquina objetivo. Para ello realizaremos una conexión al servicio y, aunque no realicemos la conexión, el sistema nos mostrará la versión de dicho servicio.
+Lo primero que haremos, será verificar la versión de FTP instalada en la máquina objetivo. Para ello realizaremos una conexión al servicio y, aunque no introduzcamos ninguna credencial, el sistema nos mostrará la versión de dicho servicio.
+
+![KNOBI17]()
+
+Ahora usaremos "searchsploit" para buscar exploits que puedan servirnos para explotar de alguna manera la versión del servicio indicada anteriormente.
+
+![KNOBI18]()
+
+Como se observa en la imagen anterior, tenemos 4 exploits disponibles. El módulo "mod_copy" que aparece en la imagen, implementa los comandos "SITE CPFR" y "SITE CPTO", que se pueden usar para copiar archivos/directorios de un lugar a otro en el servidor.
+
+Es decir, cualquier cliente no autenticado puede aprovechar dichos comandos para copiar archivos desde cualquier parte del sistema de archivos a un destino elegido.
+
+Entonces lo que vamos a hacer nosotros, es copiar la clave privada del usuario encontrado para poder acceder al sistema suplantando su identidad.
+
+Para ello, realizaremos los siguientes pasos:
+
+- Usamos "nc" para realizar una conexión al servicio FTP.
+
+![KNOBI19]()
+
+- Usamos "SITE CPFR" para indicarle al servidor el fichero que queremos copiar.
+
+![KNOBI20]()
+
+-  Usamos "SITE CPTO" para indicarle al servidor el directorio destino donde queremos copiar el fichero indicado anteriormente. En este caso, lo vamos a copiar en "/var", ya que este directorio lo podemos montar de manera local en nuestra máquina y ver todo su contenido.
+
+![KNOBI21]()
+
+A continuación desmontaremos y montaremos el directorio "/var" en la carpeta que creamos anteriormente y nos iremos al directorio "/tmp" para obtener la clave que hemos copiado anteriormente.
+
+![KNOBI22]()
+
+Nota: Copiar la clave en el directorio "/home/kali/Desktop" para futuras conexiones.
+
+Bien, ahora accederemos al sistema objetivo usando dicha clave privada.
+
+![KNOBI23]()
+
+Ya estaríamos dentro del sistema objetivo.
+
+
 
 
 
