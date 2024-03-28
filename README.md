@@ -110,7 +110,7 @@ Como se observa en la imagen anterior, tenemos 4 exploits disponibles. El módul
 
 Es decir, cualquier cliente no autenticado puede aprovechar dichos comandos para copiar archivos desde cualquier parte del sistema de archivos a un destino elegido.
 
-Entonces lo que vamos a hacer nosotros, es copiar la clave privada del usuario encontrado para poder acceder al sistema suplantando su identidad.
+Entonces lo que vamos a hacer nosotros, es copiar la clave privada que creó el usuario anteriormente para poder acceder al sistema suplantando su identidad.
 
 Para ello, realizaremos los siguientes pasos:
 
