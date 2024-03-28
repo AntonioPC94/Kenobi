@@ -92,4 +92,13 @@ Al tener dos tarjetas, es posible que la máquina objetivo esté en una red con 
 
 Aparte de la información sacada anteriormente, en el directorio "log" encontraremos varios archivos ".log", pero los que nos interesarán a nosotros, serán el "auth.log" y el "syslog".
 
+Revisando el "auth.log" nos encontraremos con que, tanto el usuario "kenobi", como el usuario "root", han cambiado sus respectivas contraseñas.
+
+![KNOBI16]()
+
+Bien, ahora vamos a cambiar de servicio, concretamente al FTP. A ver qué conseguimos sacar de él.
+
+Lo primero que haremos, será verificar la versión de FTP instalada en la máquina objetivo. Para ello realizaremos una conexión al servicio y, aunque no realicemos la conexión, el sistema nos mostrará la versión de dicho servicio.
+
+
 
