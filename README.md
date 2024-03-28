@@ -88,7 +88,7 @@ Revisando la ruta "/mnt/var/lib/dhcp/" encontraremos que la máquina objetivo ti
 
 ![KNOBI15](https://github.com/AntonioPC94/Kenobi/blob/a9c234f800c409ab541d68e9e950e320c16804e8/img/KNOBI15.png)
 
-Al tener dos tarjetas, es posible que la máquina objetivo esté en una red con más equipos, así que es posible que más adelante podremos realizar "Pivoting" entre ellos.
+Al tener dos tarjetas, es posible que la máquina objetivo esté en una red con más equipos, así que es seguro que más adelante podremos realizar "Pivoting" entre ellos.
 
 Aparte de la información sacada anteriormente, en el directorio "log" encontraremos varios archivos ".log", pero los que nos interesarán a nosotros, serán el "auth.log" y el "syslog".
 
