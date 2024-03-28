@@ -65,7 +65,31 @@ Aunque no podamos hacer nada ahora mismo con dicho servicio, tenemos un usuario 
 
 Ahora vamos a irnos al servicio RPCBind, el cual se encuentra en el puerto 111. Dicho servicio es interesante porque lo que hace es que cuando un programa cliente necesita comunicarse con un programa servidor a través de RPC, consulta a RPCBind para obtener el número de puerto asociado con el programa servidor en cuestión. De esta manera, RPCBind ayuda a los programas clientes a localizar los servicios RPC en el sistema.
 
-Bien, entonces ahora vamos a lanzar una petición al servidor para obtener información sobre los servicios NFS que podrían estar disponibles en la máquina objetivo, como listar archivos (nfs-ls), estadísticas de espacio en disco (nfs-statfs) y exportaciones montadas (nfs-showmount).
+Bien, entonces ahora vamos a lanzar una petición al servidor para obtener información sobre los servicios NFS o directorios que podrían estar disponibles en la máquina objetivo, como listar archivos (nfs-ls), estadísticas de espacio en disco (nfs-statfs) y exportaciones montadas (nfs-showmount).
 
+Para ello, usaremos la siguiente orden:
+
+![KNOBI12]()
+
+Como se observa en la imagen anterior, el directorio "/var" estaría listo en la máquina objetivo para ser montado en una carpeta de nuestro sistema.
+
+Entonces lo que vamos a hacer ahora, es montar dicha carpeta en otra que crearemos a continuación. Para ello, realizaremos el siguiente proceso:
+
+- Creamos una carpeta en "/mnt" llamada "var".
+- Una vez hayamos creado la carpeta, montaremos el directorio compartido del servidor utilizando el siguiente comando: sudo mount -t nfs (DirecciónIPMáquinaObjetivo):/var /mnt/var
+
+Ahora si nos vamos a "/mnt/var" podremos ver el contenido del recurso que nos hemos traído anteriormente.
+
+![KNOBI13]()
+
+Revisando la ruta "/mnt/var/lib/dhcp/" encontraremos que la máquina objetivo tiene dos tarjetas de red.
+
+![KNOBI14]()
+
+![KNOBI15]()
+
+Al tener dos tarjetas, es posible que la máquina objetivo esté en una red con más equipos, así que es posible que más adelante podremos realizar "Pivoting" entre ellos.
+
+Aparte de la información sacada anteriormente, en el directorio "log" encontraremos varios archivos ".log", pero los que nos interesarán a nosotros, serán el "auth.log" y el "syslog".
 
 
