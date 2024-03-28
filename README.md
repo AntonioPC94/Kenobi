@@ -71,7 +71,7 @@ Para ello, usaremos la siguiente orden:
 
 ![KNOBI12](https://github.com/AntonioPC94/Kenobi/blob/a9c234f800c409ab541d68e9e950e320c16804e8/img/KNOBI12.png)
 
-Como se observa en la imagen anterior, el directorio "/var" estaría listo en la máquina objetivo para ser montado en una carpeta de nuestro sistema.
+Como se observa en la imagen anterior, hay en la máquina objetivo un directorio listo para ser montado en una carpeta de nuestro sistema.
 
 Entonces lo que vamos a hacer ahora, es montar dicha carpeta en otra que crearemos a continuación. Para ello, realizaremos el siguiente proceso:
 
