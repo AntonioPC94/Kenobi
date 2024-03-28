@@ -122,7 +122,7 @@ Para ello, realizaremos los siguientes pasos:
 
 ![KNOBI20](https://github.com/AntonioPC94/Kenobi/blob/a9c234f800c409ab541d68e9e950e320c16804e8/img/KNOBI20.png)
 
--  Usamos "SITE CPTO" para indicarle al servidor el directorio destino donde queremos copiar el fichero indicado anteriormente. En este caso, lo vamos a copiar en "/var", ya que este directorio lo podemos montar de manera local en nuestra máquina y ver todo su contenido.
+-  Usamos "SITE CPTO" para indicarle al servidor el directorio destino donde queremos copiar el fichero indicado anteriormente. En este caso, lo vamos a copiar en "/var/tmp", ya que el directorio "/var" lo podemos montar de manera local en nuestra máquina y ver todo su contenido.
 
 ![KNOBI21](https://github.com/AntonioPC94/Kenobi/blob/a9c234f800c409ab541d68e9e950e320c16804e8/img/KNOBI21.png)
 
