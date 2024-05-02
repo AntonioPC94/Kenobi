@@ -146,31 +146,31 @@ Para la escalada de privilegios, aprovecharemos los permisos SUID. SUID es un ti
 
 El primer paso es buscar en la máquina objetivo archivos con el bit SUID configurado:
 
-![KNOBI25]()
+![KNOBI25](img/KNOBI25.png)
 
 Tras lanzar el comando, veremos que existen varios binarios, aunque habrá uno que nos llamará especialmente la atención:
 
-![KNOBI26]()
+![KNOBI26](img/KNOBI26.png)
 
 A continuación, comprobaremos que el propietario del binario es el usuario "root" realizando el siguiente comando:
 
-![KNOBI27]()
+![KNOBI27](img/KNOBI27.png)
 
 Bien, ahora vamos a ejecutar el binario para ver lo que hace.
 
-![KNOBI28]()
+![KNOBI28](img/KNOBI28.png)
 
 Como se observa en la imagen anterior, parece ser que el binario sirve para comprobar distintas cosas del sistema.
 
 Ahora vamos a sacar un poco más de información sobre el binario utilizando el comando "strings" sobre él.
 
-![KNOBI29]()
+![KNOBI29](img/KNOBI29.png)
 
-![KNOBI30]()
+![KNOBI30](img/KNOBI30.png)
 
 El binario ejecuta el comando "curl" sin una ruta de archivo completa. Gracias a esto, podremos aprovecharnos y utilizar el comando "echo" para reemplazar el contenido del binario "curl" con "/bin/sh".
 
-![KNOBI31]()
+![KNOBI31](img/KNOBI31.png)
 
 Luego, cuando volvamos a ejecutar el binario, nos dará con suerte una shell como usuario "root".
 
