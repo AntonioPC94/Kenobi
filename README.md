@@ -126,7 +126,11 @@ Para ello, realizaremos los siguientes pasos:
 
 ![KNOBI21](https://github.com/AntonioPC94/Kenobi/blob/a9c234f800c409ab541d68e9e950e320c16804e8/img/KNOBI21.png)
 
-A continuación desmontaremos y montaremos el directorio "/var" en la carpeta que creamos anteriormente y nos iremos al directorio "/tmp" para obtener la clave que hemos copiado anteriormente.
+A continuación, crearemos una carpeta en nuestra máquina local llamada "tmp" en la ruta "/mnt/var/".
+
+Una vez creada, montaremos el directorio "/var/ de la máquina objetivo en esta y accederemos a ella para poder visualizar la clave privada del usuario.
+
+![KNOBI24](img/KNOBI24.png)
 
 ![KNOBI22](https://github.com/AntonioPC94/Kenobi/blob/a9c234f800c409ab541d68e9e950e320c16804e8/img/KNOBI22.png)
 
