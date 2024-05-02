@@ -174,4 +174,4 @@ El binario ejecuta el comando "curl" sin una ruta de archivo completa. Gracias a
 
 Luego, cuando volvamos a ejecutar el binario, nos dará con suerte una shell como usuario "root".
 
-Nota: Aquí ejecuté el binario pero no me dio acceso a "root".
+**Nota**: Aquí ejecuté el binario pero no me dio acceso a "root".
