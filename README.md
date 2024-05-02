@@ -142,7 +142,36 @@ Bien, ahora accederemos al sistema objetivo usando dicha clave privada.
 
 Ya estaríamos dentro del sistema objetivo.
 
+Para la escalada de privilegios, aprovecharemos los permisos SUID. SUID es un tipo de permiso que permite ejecutar un binario con los permisos del propietario del archivo, en lugar de los del usuario. Si aprovechamos los privilegios elevados de un binario con un bit SUID configurado, entonces podremos engañar al sistema para que nos brinde acceso escalado completo. Este es un método común de escalada de privilegios en sistemas Linux.
 
+El primer paso es buscar en la máquina objetivo archivos con el bit SUID configurado:
 
+![KNOBI25]()
+
+Tras lanzar el comando, veremos que existen varios binarios, aunque habrá uno que nos llamará especialmente la atención:
+
+![KNOBI26]()
+
+A continuación, comprobaremos que el propietario del binario es el usuario "root" realizando el siguiente comando:
+
+![KNOBI27]()
+
+Bien, ahora vamos a ejecutar el binario para ver lo que hace.
+
+![KNOBI28]()
+
+Como se observa en la imagen anterior, parece ser que el binario sirve para comprobar distintas cosas del sistema.
+
+Ahora vamos a sacar un poco más de información sobre el binario utilizando el comando "strings" sobre él.
+
+![KNOBI29]()
+
+![KNOBI30]()
+
+El binario ejecuta el comando "curl" sin una ruta de archivo completa. Gracias a esto, podremos aprovecharnos y utilizar el comando "echo" para reemplazar el contenido del binario "curl" con "/bin/sh".
+
+![KNOBI31]()
+
+Luego, cuando volvamos a ejecutar el binario, nos dará con suerte una shell como usuario "root".
 
 
